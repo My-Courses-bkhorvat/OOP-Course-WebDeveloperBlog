@@ -12,24 +12,20 @@
 
 class User
 {
-    function __construct($name)
+    private static $name;
+
+    public static function setName($name1)
     {
-        $this->name = $name;
+        self::$name = $name1;
     }
 
-    function getName()
+    public static function getName()
     {
-        echo $this->name;
-        $this->test();
-    }
-    public function test() {
-        echo 'Test';
+        return self::$name;
     }
 }
-
-$user1 = new User('Bohdan');
-
-$user1->getName();
+User::setName('Ivan');
+echo User::getName();
 
 ?>
 
