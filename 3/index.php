@@ -24,7 +24,7 @@ class User
 
     function getInfo()
     {
-        return $this->name.' '.$this->surname.'!git ';
+        return $this->name.' '.$this->surname.'!';
     }
 }
 
