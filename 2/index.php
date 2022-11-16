@@ -10,22 +10,25 @@
 <body>
 <?php
 
-class Shop
+class User
 {
-    public $public;
-    private $name;
-
-    public function naming()
-    {
-        $this->name = "Adidas";
-        echo $this->name;
-    }
+    public $name = "name";
+    private $password = "password";
+    public $email = "email";
+    protected $city = "city";
 }
+$admin = new User;
+//echo $admin->name;
 
-$product = new Shop();
-$product->naming();
-//$product->name = "Nike"; // dont work because this is private variable
+$user1 = new User;
+$admin->name = "Andrew";
+$user1->name = "Olek";
 
+echo $admin->name;
+echo $user1->name;
+
+$user1->surname = "Ivanov";
+echo $user1->surname;
 ?>
 
 </body>
