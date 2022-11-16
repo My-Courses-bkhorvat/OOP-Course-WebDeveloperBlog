@@ -21,11 +21,17 @@ class User
     {
         echo "Hello {$this->name}!";
     }
+
+    function getInfo()
+    {
+        return $this->name.' '.$this->surname.'!git ';
+    }
 }
 
 $admin = new User;
 $admin->name = "Bohdan";
-$admin->Hello();
+$admin->surname = "Khorvat";
+echo "User: ".$admin->getInfo();
 
 ?>
 
