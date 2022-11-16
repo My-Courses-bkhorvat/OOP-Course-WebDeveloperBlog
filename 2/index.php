@@ -24,6 +24,7 @@ class Shop
 
 $product = new Shop();
 $product->naming();
+//$product->name = "Nike"; // dont work because this is private variable
 
 ?>
 
