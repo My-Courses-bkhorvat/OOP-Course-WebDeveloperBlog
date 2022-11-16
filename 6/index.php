@@ -22,17 +22,37 @@ class User
 
     function getInfo()
     {
-        echo "{$this->name}"."{$this->password}"."{$this->email}"."{$this->city}";
+        $information = "{$this->name}" . "{$this->password}" . "{$this->email}" . "{$this->city}";
+
+        return $information;
     }
 }
 
-class Moderator extends User {
+class Moderator extends User
+{
     public $info;
     public $rights;
-}
-$moder = new Moderator('Bohdan', '123', 'bohdan@gmail.com', 'Krakow');
 
-$moder->getInfo();
+    public function __construct($name, $password, $email, $city, $info, $rights)
+    {
+        parent::__construct($name, $password, $email, $city);
+        $this->info = $info;
+        $this->rights = $rights;
+    }
+
+    public function getInfo()
+    {
+        $information =  parent::getInfo();
+        $information .= "{$this->info}" . "{$this->rights}";
+
+        return $information;
+    }
+
+}
+
+$moder = new Moderator('Bohdan', '123', 'bohdan@gmail.com', 'Krakow', 'Moderator', 'true');
+
+echo $moder->getInfo();
 ?>
 
 </body>
