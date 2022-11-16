@@ -30,6 +30,20 @@ $user1 = new User('Bohdan', 'qwerty', 'admin@gmail.com', 'Kiev');
 
 $user1->getInfo();
 
+class DestructibleClass {
+    function __construct() {
+        print "Construct";
+        $this->name = "DestructibleClass";
+    }
+    function __destruct() {
+        print "Destruct ".$this->name;
+    }
+}
+
+$obj = new DestructibleClass();
+
+echo "Here";
+
 ?>
 
 </body>
