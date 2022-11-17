@@ -27,7 +27,24 @@ $user1 = new User('Bogdan', 'Krakow');
 $user1->setId('123');
 $user2 = clone $user1;
 
-var_dump($user1);
-var_dump($user2);
+class GetSet
+{
+    private $number = 1;
+
+    public function __get($name)
+    {
+        echo "You get {$name}";
+    }
+
+    public function __set($name, $val)
+    {
+        echo "You set {$name} to ";
+    }
+
+}
+
+$obj = new GetSet();
+echo $obj->number;
+echo $obj->number = 689;
 
 ?>
