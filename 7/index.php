@@ -10,19 +10,11 @@
 <body>
 <?php
 
-class User
-{
-    public static $name;
+//encapsulation, polymorphism
 
-    public static function hello() {
-        echo "Hello ". self::$name;
-    }
-
-}
-
-user::$name = "Bohdan!";
-user::hello();
-echo user::$name;
+//https://habr.com/ru/post/87205/
+//https://habr.com/ru/post/37610/
+//http://www.php.su/learnphp/phpoo/?cp
 ?>
 
 </body>
