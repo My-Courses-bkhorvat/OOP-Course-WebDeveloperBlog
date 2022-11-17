@@ -46,5 +46,3 @@ class GetSet
 $obj = new GetSet();
 echo $obj->number;
 echo $obj->number = 689;
-
-?>
